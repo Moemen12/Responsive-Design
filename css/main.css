@@ -4,6 +4,10 @@
     -moz-box-sizing:border-box;
      box-sizing:border-box;
   }
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+    height: 3000px;
+  }
 
   /* End Global rules */
 
@@ -35,10 +39,10 @@
        border: 4px solid #fff;
        font-size: 24px;
        width: 48%;
-       float: left;
        padding:20px;
        margin-left: 1%;
        margin-right: 1%;
+       word-break: break-all;
         
     }
     .header .overlay .order{
@@ -64,6 +68,9 @@
 
 
     @media (max-width:767px) { 
+      h1{
+        margin-top:40px;
+      }
         .header .overlay .plan{
         float: none;          
         margin: 0 auto 20px;
@@ -73,12 +80,228 @@
 
 
     /* End Header */
+ 
+
+    /* Start Features */
+    .features{
+      padding: 30px 0;
+     }
+
+   .features .feat{
+    color: #555;
+    padding:0 20px 0 0;
+    margin-bottom: 30px;
+   }
+   .features .feat p{
+    line-height: 1.6;
+   }
+   .features .feat h2{
+    margin: 10px 0 8px;
+    margin: 0;
+   }
+  .features .h1{
+    font-size: 50px;
+    color: #555;
+  }
+  @media (max-width:767px){
+    .features .feat{
+      text-align: center;
+     }
+    }
+  @media (min-width:768px){
+    .features .feat{
+      width:50%;
+     }
+
+  }
+  @media (min-width:992px){
+    .features .feat{
+      width:33.333%;
+     }
+  }
+    /* End Features */
 
 
+    /* Start About Us     */
+   .about-us{
+    background-color:#ececec;
+    padding: 30px 0;
+   }
+   .about-us .h1{
+     font-size:50px;
+     color: #848484;
+   }
+    .about-us .responsive-paragraph{
+      color: #848484;
+    }
+
+
+    /* End About Us      */
+
+
+
+   /* Start Our works   */
+
+   @media (max-width:767px){
+    .our-works .image{
+      width: 100%;
+   }
+
+   }
+
+   @media (min-width:768px){
+    .our-works .image{
+      width: 50%;
+   }
+
+   }
+
+   @media (min-width:992px){
+    .our-works .image{
+      width: 33.3333%;
+   }
+
+   }
+
+
+     @media (min-width:1200px){
+      .our-works .image{
+        width: 25%;
+     }
+
+     }
+
+     
+
+
+
+
+
+
+
+   /* End Our works   */
+
+
+
+
+   /* Start Our Pricing Table   */
+    
+   .pricing-table{
+    background-color: #444;
+    color: #fff;
+    padding: 50px 0;
+   }
+
+   .pricing-table .h1{
+    margin: 0 0 40px;
+    font-size: 50px;
+   }
+
+  .pricing-table .pricing-plan{
+    border: 3px solid #fff;
+    padding: 20px 0;
+    position: relative;
+    
+  }
+
+  .pricing-table .pricing-plan h3{
+   margin: 0 0 10px;
+   font-size:26px;
+  }
+  .pricing-table .pricing-plan .pricing{
+     font-size: 22px;
+     display: inline-block;
+     margin: 0 0 10px;
+     color:#bfbfbf;
+   }
+   .pricing-table .pricing-plan ul{
+    line-height: 2;
+    font-size: 18px;
+   }
+
+   @media (max-width:767px){
+    .pricing-table .pricing-plan{
+      width:100%;
+      margin-bottom: 20px;
+    } 
+
+  }
+
+   @media (min-width:768px){
+    .pricing-table .pricing-plan{
+      width:100%;
+      margin-bottom: 20px;
+    } 
+
+  }
+   
+   @media (min-width:992px){
+    .pricing-table .pricing-plan:not(.ultimate){
+    margin-right:1% ;
+
+
+    }
+    .pricing-table .pricing-plan{
+      width:32.666%;
+      margin-bottom: 0;
+    } 
+
+    .pricing-table .pricing-plan.plus{
+      left: 33.666%;
+    }
+
+    .pricing-table .pricing-plan.premium{
+      right:33.666%;
+    }
+   }
+   /* End Our Pricing Table   */
+
+
+   /* Start What the say   */
+    
+   .the-say{
+    padding: 50px 0;
+   }
+   .the-say .h1{
+    font-size: 50px;
+    margin: 0 0 20px;
+    color: #555;
+   }
+
+   .the-say .person-say{
+     background-color: #EEE;
+     padding: 20px;
+     margin: 0 0 20px;
+    border: 1px solid #DDD;
+    
+   }
+
+   .the-say .person-say:first-of-type{
+      width: 80%;
+      margin-left:10% ;
+   }
+
+   .the-say .person-say:not(:first-of-type){
+    width: 50%;
+ }
+
+
+   /* End What the say   */
+
+
+   
 
 @media (max-width:767px) { /*Mobile & tablet rules */
   .visible-xs{
     display: block !important;
+  }
+  .hidden-xs{
+    display: none !important;
+  }
+  .responsive-paragraph{
+    text-align: center;
+    font-size: 20px !important;
+
   }
 }
 
@@ -86,15 +309,20 @@
 .visible-sm{
         display: block !important;
       }
+  .hidden-sm{
+    display: none !important;
+  }
   .container{
     width: 750px;
   }
-  
 }
 
 @media (min-width:992px) and (max-width:1199px) { /*small screen rules */
     .visible-md{
         display: block !important;
+      }
+      .hidden-md{
+        display: none !important;
       }
     .container{
         width: 970px;
@@ -104,6 +332,9 @@
 @media (min-width:1200px) { /*small screen rules */
     .visible-lg{
         display: block !important;
+      }
+      .hidden-lg{
+        display: none !important;
       }
     .container{
         width: 1170px;
@@ -133,4 +364,30 @@
    .visible-lg{
     display: none;
    }
+
+   .float-left{
+    float: left;
+   }
+   .float-right{
+    float: right;
+   }
+
+   .h1{
+    font-size: 2em;
+   }
+   .responsive-paragraph{
+    line-height: 1.8;
+    font-size: 22px;
+   }
+   .responsive-image{
+     width: 100%;
+   }
+
+   .classic-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   }
+
+
      /* End My framwork */
